@@ -23,7 +23,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet" type="text/css">
-
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway">
+<link href='http://fonts.googleapis.com/css?family=Nixie+One|Londrina+Outline' rel='stylesheet' type='text/css'>
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
@@ -46,13 +47,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
 
   <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
   <div id="main">
-    Hello world!   <!-- You'll be deleting this line in the course -->
+     
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -121,13 +122,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('header').style.display = 'none';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
+      document.getElementById('workExperience').style.display = 'none';;
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
+      document.getElementById('projects').style.display = 'none';;
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
+      document.getElementById('education').style.display = 'none';;
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('letsConnect').style.display = 'none';

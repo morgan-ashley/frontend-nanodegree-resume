@@ -1,3 +1,9 @@
+/* font-family: 'Nixie One', cursive;
+font-family: 'Londrina Shadow', cursive; */
+
+
+
+
 * {
   padding:0;
   margin:0;
@@ -14,31 +20,34 @@
 }
 
 h1 {
-  font-size: 40px;
-  color: #F5A623;
+  font-size: 10em;
+  color: #000;
   line-height: 48px;
-  display: inline;
+  display: inline; 
+  font-family: 'Londrina Outline', cursive; 
 }
 
 h2 {
   font-weight: bold;
-  font-size: 24px;
-  color: #999999;
+  font-size: 3em;
+  color: #000;
   line-height: 29px;
   padding: 10px;
+  font-family: 'Londrina Shadow', cursive;
 }
 
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #000;
   line-height: 22px;
+  font-family: 'Londrina Outline', cursive; 
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4A4A4A;
+  color: #000;
   line-height: 17px;
 }
 
@@ -67,9 +76,10 @@ h2, h3, h4, h5 {
 }
 
 p {
-  font-size: 14px;
-  color: #333333;
-  line-height: 21px;
+  font-size: 1.5em;
+  color: #000;
+  line-height: 30px;
+  font-family: 'Nixie One', cursive;
 }
 
 a {
@@ -82,12 +92,12 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #F3F3F3;
+  color: #000;
   line-height: 28px;
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #000;
   display: none;
 }
 
@@ -105,18 +115,18 @@ a {
 }
 
 .gray {
-  background-color: #F3F3F3;
+  background-color: #FFF;
   padding-bottom: 10px;
   clear:both;
 }
 
 .dark-gray {
-  background-color: #4A4A4A;
+  background-color: #000;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #FFF;
 }
 
 .flex-box {
@@ -150,6 +160,10 @@ img {
   padding: 10px;
 }
 
+.work-entry a {
+  color: #1695A3;
+}
+
 /* Bar chart stuff */
 .chart div {
   font: 10px sans-serif;
@@ -164,6 +178,9 @@ img {
 
 span {
   padding: 5px;
+  font-family: 'Nixie One', cursive;
+  font-size: 2em;
+  color: #ACF0F2;
 }
 
 #letsConnect {
@@ -199,12 +216,15 @@ span {
   height: 100%;
   margin-left: 5%;
   margin-right: 5%;
+  border: dashed black 3px;
+
 }
 
 #mapDiv {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+
 }
 
 @media only screen and (min-width: 750px) {
