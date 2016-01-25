@@ -1,13 +1,7 @@
-/* font-family: 'Nixie One', cursive;
-font-family: 'Londrina Shadow', cursive; */
-
-
-
-
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .clearfix {
@@ -20,93 +14,82 @@ font-family: 'Londrina Shadow', cursive; */
 }
 
 h1 {
-  font-size: 10em;
-  color: #000;
-  line-height: 48px;
-  display: inline; 
-  font-family: 'Londrina Outline', cursive; 
+  font: normal 9em/48px "Lobster", cursive;;
+  color: #FF9800;
+  display: inline;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 3em;
-  color: #000;
-  line-height: 29px;
+  font: normal 3em/29px "Lobster", cursive;;
+  color: #7E8AA2;
   padding: 10px;
-  font-family: 'Londrina Shadow', cursive;
+  text-shadow: 2px 2px 2px #263248;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
-  font-family: 'Londrina Outline', cursive; 
+  font: normal 2.5em/22px "Lobster", cursive;;
+  color: #7E8AA2;
+  text-shadow: 2px 2px 2px #263248;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #000;
+  color: #4A4A4A;
   line-height: 17px;
 }
 
 h2, h3, h4, h5 {
-  padding:10px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 10px 5%;
 }
 
 
 .date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999999;
-  line-height: 16px;
+  font: italic 14px/16px "Delius", cursive;
+  color: #7E8AA2;
   float: left;
 }
 
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  color: #263248;
   line-height: 16px;
   float: right;
 
 }
 
 p {
-  font-size: 1.5em;
-  color: #000;
-  line-height: 30px;
-  font-family: 'Nixie One', cursive;
+  font: normal 16px/21px "Delius", cursive;
+  color: #263248;
 }
 
 a {
-  color: #1199C3;
+  color: #FF9800;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
 
-.welcome-message {
+/* .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #000;
+  color: #F3F3F3;
   line-height: 28px;
-}
+} */
 
 #skillsH3 {
-  color: #000;
+  color: #FF9800;
   display: none;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #FFF;
+  border-top: 1px dashed #263248;
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: #FF9800;
 }
 
 .white-text {
@@ -115,18 +98,19 @@ a {
 }
 
 .gray {
-  background-color: #FFF;
+  background-color: #F5FAFF;
   padding-bottom: 10px;
   clear:both;
 }
 
 .dark-gray {
-  background-color: #000;
+  background-color: #263248;
 }
+
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #FFF;
+  background-color: #263248;
 }
 
 .flex-box {
@@ -139,10 +123,8 @@ a {
 }
 
 .center-content {
-  padding-top: 2.5%;
+  padding: 2.5% 5%;
   padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 2.5%
 }
 
 ul {
@@ -158,10 +140,8 @@ ul {
 
 img {
   padding: 10px;
-}
-
-.work-entry a {
-  color: #1695A3;
+  border: 2px solid #FF9800;
+  margin-left: 15px;
 }
 
 /* Bar chart stuff */
@@ -178,9 +158,8 @@ img {
 
 span {
   padding: 5px;
-  font-family: 'Nixie One', cursive;
-  font-size: 2em;
-  color: #ACF0F2;
+  color: #7E8AA2;
+  font-family: "Delius", cursive;
 }
 
 #letsConnect {
@@ -216,15 +195,13 @@ span {
   height: 100%;
   margin-left: 5%;
   margin-right: 5%;
-  border: dashed black 3px;
-
+  border: 3px solid #263248;
 }
 
 #mapDiv {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
-
 }
 
 @media only screen and (min-width: 750px) {
