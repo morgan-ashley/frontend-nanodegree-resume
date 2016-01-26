@@ -6,6 +6,7 @@ var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
 var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLLinkedIn = '<li class="flex-item"><span class="orange-text">linkedIn</span><span class="white-text">%data%</span></li>'
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
@@ -45,21 +46,6 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
-
-/*
-The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
-*/
-//edited code
- /* function inName(name) {  
-    "use strict";
-    name = name.trim.split(" ");
-    console.log(name);
-    name[1] = name[1].toUpperCase();
-    name[0] = name[0].slice(0,1).toLowerCase + name[0].slice(1).toLowerCase;
-    return name[0] + " " + name[1];
-} */
-
-
 // orginal code below
 $(document).ready(function() {
   $('button').click(function() {
@@ -91,19 +77,7 @@ $(document).click(function(loc) {
     console.log('x location: ' + x + '; y location: ' + y); // must be on line 90
 });
 
-
-
-/*
-This is the fun part. Here's where we generate the custom Google Map for the website.
-See the documentation below for more details.
-https://developers.google.com/maps/documentation/javascript/reference
-*/
-var map;    // declares a global map variable
-
-
-/*
-Start here! initializeMap() is called when page is loaded.
-*/
+var map;
 function initializeMap() {
   var myLatlng = new google.maps.LatLng(37.769642, -122.427644);
   var mapOptions = {
@@ -111,15 +85,10 @@ function initializeMap() {
     center: myLatlng
   };
 
-  
-  
-
   var mapOptions = {
     disableDefaultUI: true
   };
 
-  // This next line makes `map` a new Google Map JavaScript Object and attaches it to
-  // <div id="map">, which is appended as part of an exercise late in the course.
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
 
@@ -154,9 +123,6 @@ function initializeMap() {
     return locations;
   
 }
-
-
-
   /*
   createMapMarker(placeData) reads Google Places search results to create map pins.
   placeData is the object returned from search results containing information
@@ -191,7 +157,6 @@ function initializeMap() {
       title: 'San Francisco, CA'
     });
 
-    // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'mouseover', function() {
     infowindow.open(map, marker);
 }); 
@@ -201,19 +166,11 @@ function initializeMap() {
     infoWindow.close();
 });
 
-     // this is where the pin actually gets added to the map.
-    // bounds.extend() takes in a map location object
     bounds.extend(new google.maps.LatLng(lat, lon));
-    // fit the map to the new marker
     map.fitBounds(bounds);
-    // center the map
     map.setCenter(bounds.getCenter());
   }
 
-  /*
-  callback(results, status) makes sure the search returned results for a location.
-  If so, it creates a new map marker for that location.
-  */
   function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMapMarker(results[0]);
@@ -256,16 +213,7 @@ function initializeMap() {
 
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
-
-// Calls the initializeMap() function when the page loads
 window.addEventListener('load', initializeMap);
-
-// Vanilla JS way to listen for resizing of the window
-// and adjust map bounds
 window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
   map.fitBounds(mapBounds);
 });
